@@ -77,7 +77,7 @@ try:
         print('ID:', ID)
 
         if validateID(ID) == 0:
-            unautorized()
+            unauthorized()
         elif validateID(ID) == 1:
             employee()
         elif validateID(ID) == 2:
