@@ -18,14 +18,43 @@ def openSwitch(port):
     sleep(5)
     GPIO.output(port, GPIO.HIGH)
 
-def validateID(id):
+def validateID(id): # Modify to return the user or something.
     if id in admins:
         return 2
     elif id in employees:
         return 1
     else:
         return 0
+    
+def checkout():
+    # User taking a battery
+    '''
+    if checkBalance() == enough funds:
+        print('Sufficient funds, take a battery')
+        openSwitch()
+        updateBalance(-1)
+        return
+    elif checkBalance() == not enough funds:
+        print('Not enough funds, please contact an administrator')
+        return
+    else:
+        exception
+    '''    
 
+def checkin(N):
+    # User returning one or more batteries
+    print('Drop battery in container')
+    openSwitch()
+    # Check the balance to see if the batteries are dropped
+    while(not checkWeight()):
+        if (cancelOperation()):
+            print('Operation Cancelled')
+            return
+            # Return to main menu
+        pass
+    # Batteries are sensed
+    updateBalance(N)
+    
 def unauthorized():
     # Routine for unauthorized user
     print('Unauthorized')
