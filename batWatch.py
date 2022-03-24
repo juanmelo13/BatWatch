@@ -1,5 +1,7 @@
 import sys
 from time import sleep
+from tkinter import *
+from tkinter import ttk
 
 import RPi.GPIO as GPIO
 
@@ -83,6 +85,11 @@ def admin(ID):
     # Routine for admin badge
     print('Admin Authorized')
     openSwitch(18)
+
+    
+
+
+
 
 try:
     while True:
