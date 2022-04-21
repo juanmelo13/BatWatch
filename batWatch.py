@@ -257,9 +257,11 @@ try:
         elif validateID(ID) == 2:
             admin(ID)
             WelcomeToAdmin()
-
-        sleep(5)
+            
+            
         root.mainloop()
+        sleep(5)
+        
         
 except KeyboardInterrupt:
     GPIO.cleanup()
